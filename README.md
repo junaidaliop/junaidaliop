@@ -10,8 +10,10 @@ Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learnin
    <a href="https://orcid.org/my-orcid?orcid=0009-0008-9249-9983">
       <img alt="ORCID" title="My ORCID Profile" src="https://custom-icon-badges.demolab.com/badge/-ORCID-26b74f?style=for-the-badge&logo=orcid&logoColor=white"/></a> 
    <a href="https://github.com/junaidaliop">
-      <img alt="GitHub" title="My GitHub" src="https://custom-icon-badges.demolab.com/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-   </a>
+      <img alt="GitHub" title="My GitHub" src="https://custom-icon-badges.demolab.com/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+     <a href="https://github.com/junaidaliop?tab=repositories">
+   <img alt="GitHub Stars" title="GitHub Stars" src="https://custom-icon-badges.demolab.com/github/stars/junaidaliop?color=yellow&style=for-the-badge&logo=star&logoColor=white"/>
+</a>
 </p>
 
 ---
