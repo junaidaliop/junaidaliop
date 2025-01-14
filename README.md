@@ -2,7 +2,7 @@
 
 **`AI Researcher | Graduate Scholar`**
 
-Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learning and Scientific Computing. Currently, I am working on design of state-of-the-art optimization algorithms with applications to  medical imaging, recommender systems. I also work on the neural network based solutions of differential equations.
+Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learning and Scientific Computing. Currently, I am working on design of state-of-the-art optimization algorithms with applications to  computer vision, medical imaging and recommender systems. I also work on the neural network based solutions of differential equations.
 
 <p align="left">
      <a href="https://scholar.google.com/citations?user=9VTFIJcAAAAJ&hl=en&oi=ao">
