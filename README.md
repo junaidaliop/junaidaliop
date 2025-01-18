@@ -115,6 +115,6 @@ I'm open to research collaborations in any of the modules i work in. Feel free t
 
 ### GitHub Stats
 
-![Junaid's GitHub Stats](https://github-readme-stats.vercel.app/api?username=junaidaliop&show_icons=true&theme=gruvbox)
+![Junaid's GitHub Stats](https://github-readme-stats.vercel.app/api?username=junaidaliop&show_icons=true&theme=gruvbox&count_private=true)
 
 ---
