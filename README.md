@@ -42,12 +42,12 @@ Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learnin
    [![DOI: 10.1016/j.asoc.2025.113091](https://img.shields.io/badge/DOI-10.1016%2Fj.asoc.2025.113091-blue)](https://doi.org/10.1016/j.asoc.2025.113091)
 
 3. **[Bayesian-regularized cascaded neural networks for fractional asymmetric carbon-thermal nutrient-plankton dynamics under global warming and climatic perturbations](https://doi.org/10.1016/j.engappai.2025.110739)**  
-   **Muhammad Junaid Ali Asif Raja** Adil Sultan, Chuan-Yu Chang, Chi-Min Shu, Adiqa Kausar Kiani, Muhammad Asif Zahoor Raja.  
+   **Muhammad Junaid Ali Asif Raja**, Adil Sultan, Chuan-Yu Chang, Chi-Min Shu, Adiqa Kausar Kiani, Muhammad Asif Zahoor Raja.  
    *Engineering Applications of Artificial Intelligence*, 2025.  
    [![DOI: 10.1016/j.engappai.2025.110739](https://img.shields.io/badge/DOI-10.1016%2Fj.engappai.2025.110739-blue)](https://doi.org/10.1016/j.engappai.2025.110739)
 
 4. **[Design of a fractional-order environmental toxin-plankton system in aquatic ecosystems: A novel machine predictive expedition with nonlinear autoregressive neuroarchitectures](https://doi.org/10.1016/j.watres.2025.123640)**  
-   **Muhammad Junaid Ali Asif Raja** Adil Sultan, Chuan-Yu Chang, Chi-Min Shu, Muhammad Shoaib, Adiqa Kausar Kiani, Muhammad Asif Zahoor Raja.   
+   **Muhammad Junaid Ali Asif Raja**, Adil Sultan, Chuan-Yu Chang, Chi-Min Shu, Muhammad Shoaib, Adiqa Kausar Kiani, Muhammad Asif Zahoor Raja.   
    *Water Research*, 2025.  
    [![DOI: 10.1016/j.watres.2025.123640](https://img.shields.io/badge/DOI-10.1016%2Fj.watres.2025.123640-blue)](https://doi.org/10.1016/j.watres.2025.123640)
 
@@ -62,7 +62,7 @@ Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learnin
    [![DOI: 10.1016/j.bspc.2025.107871](https://img.shields.io/badge/DOI-10.1016%2Fj.bspc.2025.107871-blue)](https://doi.org/10.1016/j.bspc.2025.107871)
 
 7. **[Prognostication of zooplankton-driven cholera pathoepidemiological Dynamics: Novel Bayesian-regularized deep NARX neuroarchitecture](https://doi.org/10.1016/j.compbiomed.2025.110197)**  
-   Raja, Muhammad Junaid Ali Asif, Sultan, Adil, Chang, Chuan-Yu, Shu, Chi-Min, Kiani, Adiqa Kausar, Shoaib, Muhammad, Raja, Muhammad Asif Zahoor.  
+   **Muhammad Junaid Ali Asif Raja**, Adil Sultan, Chuan-Yu Chang, Chi-Min Shu, Adiqa Kausar Kiani, Muhammad Shoaib, Muhammad Asif Zahoor Raja.  
    *Computers in Biology and Medicine*, 2025.  
    [![DOI: 10.1016/j.compbiomed.2025.110197](https://img.shields.io/badge/DOI-10.1016%2Fj.compbiomed.2025.110197-blue)](https://doi.org/10.1016/j.compbiomed.2025.110197)
 
