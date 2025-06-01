@@ -41,7 +41,7 @@ Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learnin
 
 3. **[Bayesian-regularized cascaded neural networks for fractional asymmetric carbon-thermal nutrient-plankton dynamics under global warming and climatic perturbations](https://doi.org/10.1016/j.engappai.2025.110739)**
    **Muhammad Junaid Ali Asif Raja** Adil Sultan, Chuan-Yu Chang, Chi-Min Shu, Adiqa Kausar Kiani, Muhammad Asif Zahoor Raja.  
-   *Engineering Applications of Artificial Intelligence*, 2025.
+   *Engineering Applications of Artificial Intelligence*, 2025.  
    [![DOI: 10.1016/j.engappai.2025.110739](https://img.shields.io/badge/DOI-10.1016%2Fj.engappai.2025.110739-blue)](https://doi.org/10.1016/j.engappai.2025.110739)
 
 4. **[Design of a fractional-order environmental toxin-plankton system in aquatic ecosystems: A novel machine predictive expedition with nonlinear autoregressive neuroarchitectures](https://doi.org/10.1016/j.watres.2025.123640)**
