@@ -29,6 +29,8 @@ Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learnin
 
 ---
 
+### Publications
+
 1. **[A Hybrid Neural-Computational Paradigm for Complex Firing Patterns and Excitability Transitions in Fractional Hindmarsh-Rose Neuronal Models](https://doi.org/10.1016/j.chaos.2025.116149)**  
    **Muhammad Junaid Ali Asif Raja**, Shahzaib Ahmed Hassan, Chuan-Yu Chang, Chi-Min Shu, Adiqa Kausar Kiani, Muhammad Shoaib, Muhammad Asif Zahoor Raja.  
    *Chaos, Solitons & Fractals*, 2025.  
