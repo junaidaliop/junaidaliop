@@ -9,7 +9,7 @@ Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learnin
       <img alt="Website" title="Visit My Website" src="https://custom-icon-badges.demolab.com/badge/-Website-9b59b6?style=for-the-badge&logo=browser&logoColor=white"/></a>
      <a href="https://scholar.google.com/citations?user=9VTFIJcAAAAJ&hl=en&oi=ao">
       <img alt="Google Scholar" title="Google Scholar Profile" src="https://custom-icon-badges.demolab.com/badge/-Google%20Scholar-blue?style=for-the-badge&logo=google-scholar&logoColor=white"/></a> 
-   <a href="https://orcid.org/my-orcid?orcid=0009-0008-9249-9983">
+   <a href="https://orcid.org/0009-0008-9249-9983">
       <img alt="ORCID" title="My ORCID Profile" src="https://custom-icon-badges.demolab.com/badge/-ORCID-26b74f?style=for-the-badge&logo=orcid&logoColor=white"/></a> 
    <a href="https://github.com/junaidaliop">
       <img alt="GitHub" title="My GitHub" src="https://custom-icon-badges.demolab.com/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
