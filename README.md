@@ -1,6 +1,6 @@
 # Muhammad Junaid Ali Asif Raja
 
-**`AI Researcher | Graduate Scholar`**
+**`ML Researcher | Graduate Scholar`**
 
 Hi, I'm Junaid Ali. I'm a passionate researcher in the fields of Machine Learning and Scientific Computing. Currently, I am working on design of state-of-the-art optimization algorithms with applications to  computer vision, medical imaging and recommender systems. I also work on the neural network based solutions of differential equations.
 
