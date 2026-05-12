@@ -183,60 +183,36 @@ def build_hero(name: str, palette: dict, headline: str, tagline: str) -> None:
     draw = ImageDraw.Draw(image, "RGBA")
 
     # fonts
-    micro = load_font(20)
-    small = load_font(24)
-    medium = load_font(30)
-    large = load_font(78, bold=True)
-    sub = load_font(28)
+    micro    = load_font(20)
+    sub      = load_font(30)
+    eq_font  = load_font(36, bold=True)
+    headline_font = load_font(86, bold=True)
 
-    # eyebrow + name
-    add_label(draw, (90, 64), "MUHAMMAD JUNAID ALI ASIF RAJA", micro, (*palette["muted"], 245))
-    # title bar accent
-    draw.rounded_rectangle((90, 100, 122, 110), radius=5, fill=(*palette["violet"], 230))
+    # eyebrow (name in small caps)
+    add_label(draw, (96, 70),  "MUHAMMAD JUNAID ALI ASIF RAJA", micro, (*palette["muted"], 245))
+
+    # title bar accent (vertical chip)
+    draw.rounded_rectangle((96, 108, 124, 122), radius=6, fill=(*palette["violet"], 235))
 
     # headline
-    add_label(draw, (90, 124), headline, large, (*palette["text"], 255))
-    add_label(draw, (94, 230), tagline, sub, (*palette["violet"], 250))
+    add_label(draw, (96, 138), headline, headline_font, (*palette["text"], 255))
 
-    # signature equation line under the tagline
-    eq_line = "𝒟ᵅ x(t) = f( x(t), x(t−τ), t ),   0 < α ≤ 1"
-    add_label(draw, (94, 274), eq_line, medium, (*palette["cyan"], 240))
+    # subline (vectors)
+    add_label(draw, (100, 248), tagline, sub, (*palette["violet"], 250))
 
-    # terminal panel bottom-left
+    # terminal panel bottom-left — role + lab + α only (location is already in the README sub-line)
     draw_terminal_panel(
         draw,
         palette,
         name,
         lines=[
-            (palette["violet"],  "role     = machine_learning_research :: direct_phd"),
-            (palette["cyan"],    "lab      = fractional_intelligent_computing"),
-            (palette["emerald"], "location = douliu, taiwan"),
+            (palette["violet"],  "role = machine_learning_research :: direct_phd"),
+            (palette["cyan"],    "lab  = fractional_intelligent_computing"),
+            (palette["emerald"], "α    = caputo · grünwald–letnikov · L1 scheme"),
         ],
-        origin=(90, 318),
-        width=760,
+        origin=(96, 304),
+        width=880,
     )
-
-    # right-side meta column
-    meta_lines = [
-        ("programme :", "fractional deep learning"),
-        ("methods    :", "NARX · cascade · PINN · fractional optim."),
-        ("systems    :", "HR · FHN · memristive · CPS · plankton"),
-    ]
-    y = 90
-    label_font = load_font(20, bold=True)
-    value_font = load_font(20)
-    for label, value in meta_lines:
-        add_label(draw, (970, y), label, label_font, (*palette["lavender"], 240))
-        add_label(draw, (1130, y), value, value_font, (*palette["text"], 235))
-        y += 32
-
-    # small loss equation, lower-right
-    loss = "L(θ) = Σ ‖x_θ − x‖² + λ ‖𝒟ᵅ x_θ − f‖²"
-    add_label(draw, (970, 360), loss, value_font, (*palette["cyan"], 220))
-
-    # bottom corner tag
-    corner = load_font(18)
-    add_label(draw, (1440, 414), "ƒDL · 2026", corner, (*palette["muted"], 200))
 
     image.save(ASSETS_DIR / name)
 
@@ -244,7 +220,7 @@ def build_hero(name: str, palette: dict, headline: str, tagline: str) -> None:
 def main() -> None:
     ensure_dirs()
     headline = "fractional deep learning"
-    tagline  = "Caputo · Grünwald–Letnikov · memory kernels · neural surrogates"
+    tagline  = "spiking nets · fractional optimisation · memory kernels · surrogates"
     build_hero("hero-dark.png",  DARK,  headline, tagline)
     build_hero("hero-light.png", LIGHT, headline, tagline)
     print(f"Built assets in {ASSETS_DIR}")
