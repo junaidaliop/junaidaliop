@@ -2,31 +2,49 @@
   <img src="assets/profile/hero-throne.jpg" alt="Purple and lavender flame crown-throne banner with abstract neural-network and dynamical-system traces" width="100%">
 </p>
 
-# Muhammad Junaid Ali Asif Raja
+<h1 align="center">Muhammad Junaid Ali Asif Raja</h1>
 
-Machine-learning researcher and Direct PhD student at YunTech, Taiwan. I work on scientific ML for fractional-order dynamical systems: neural surrogates, fractional optimization, PINNs, and neural operators.
+<p align="center">
+  <strong>Scientific ML · fractional dynamics · neural surrogates</strong><br>
+  Direct PhD student at YunTech, Taiwan
+</p>
 
-[Portfolio](https://junaidaliop.github.io) · [Publications](https://junaidaliop.github.io/publications/) · [CV](https://junaidaliop.github.io/assets/pdf/cv.pdf) · [Google Scholar](https://scholar.google.com/citations?user=9VTFIJcAAAAJ) · [ORCID](https://orcid.org/0009-0008-9249-9983) · [Email](mailto:muhammadjunaidaliasifraja@gmail.com)
+<p align="center">
+  <a href="https://junaidaliop.github.io">Portfolio</a> ·
+  <a href="https://junaidaliop.github.io/publications/">Publications</a> ·
+  <a href="https://junaidaliop.github.io/assets/pdf/cv.pdf">CV</a> ·
+  <a href="https://scholar.google.com/citations?user=9VTFIJcAAAAJ">Google Scholar</a> ·
+  <a href="https://orcid.org/0009-0008-9249-9983">ORCID</a> ·
+  <a href="mailto:muhammadjunaidaliasifraja@gmail.com">Email</a>
+</p>
 
-`scientific ML` · `fractional-order dynamics` · `neural surrogates` · `PINNs` · `neural operators`
+```yaml
+build:
+  input: nonlinear ordinary, delay, and fractional systems
+  model: ARX/NARX surrogates + PINNs + neural operators
+  output: reproducible scientific-ML experiments
+```
 
-## Research Lanes
+## Workbench
 
-- `fractional dynamics` - neural emulators for nonlinear ordinary, delay, and fractional systems.
-- `optimization` - fractional-calculus-inspired training rules for deep networks.
-- `scientific ML` - PINNs and neural operators for time-dependent systems.
-- `applied modeling` - neurons, ecological systems, cyber-physical malware, and biomedical signals.
+| Lane | What I am trying to make less painful |
+| --- | --- |
+| `fractional systems` | Memory-heavy dynamics, chaotic trajectories, and long-horizon prediction. |
+| `neural surrogates` | Fast emulators for systems where repeated numerical solves get expensive. |
+| `optimization` | Fractional-calculus-inspired training rules for deep networks. |
+| `scientific ML` | Structure-aware models: PINNs, neural operators, checks against solvers. |
 
-## Snapshot
+## Current Threads
 
-- Publications and metrics live on the portfolio, not duplicated here.
-- Recent threads: fractional malware propagation, neuronal firing dynamics, aquatic/plankton systems.
-- Code standard I aim for: dependencies, configs, training/evaluation entry points, and reproducible result commands.
+- Fractional malware propagation in industrial and cyber-physical systems.
+- Neuronal dynamics: FitzHugh-Nagumo, Hindmarsh-Rose, and related excitable models.
+- Aquatic and plankton systems under toxin, nutrient, climate, and refuge effects.
+- Research-code hygiene: configs, seeds, train/eval commands, and plots that can be regenerated.
 
-## Stack
+## Tools
 
-`Python` · `PyTorch` · `MATLAB` · `NumPy/SciPy` · `Jupyter` · `LaTeX` · `Git` · `Linux`
+`Python` · `PyTorch` · `NumPy/SciPy` · `MATLAB` · `Jupyter` · `LaTeX` · `Git` · `Linux`
 
-## Collaboration
+## Notes
 
-Best fit: scientific ML, fractional-order systems, neural differential models, and reproducible research code.
+No giant publication dump here. The canonical list lives on the [portfolio](https://junaidaliop.github.io/publications/) and [Google Scholar](https://scholar.google.com/citations?user=9VTFIJcAAAAJ), where it is easier to keep current.
