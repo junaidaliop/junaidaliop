@@ -5,8 +5,8 @@
 <h1 align="center">Muhammad Junaid Ali Asif Raja</h1>
 
 <p align="center">
-  <strong>Scientific ML · fractional dynamics · neural surrogates</strong><br>
-  Direct PhD student at YunTech, Taiwan
+  <strong>I build neural shortcuts for systems with memory.</strong><br>
+  Scientific ML · fractional dynamics · neural surrogates · Direct PhD student at YunTech, Taiwan
 </p>
 
 <p align="center">
@@ -19,32 +19,39 @@
 </p>
 
 ```yaml
-build:
-  input: nonlinear ordinary, delay, and fractional systems
-  model: ARX/NARX surrogates + PINNs + neural operators
-  output: reproducible scientific-ML experiments
+current_loop:
+  simulate: nonlinear ordinary, delay, and fractional systems
+  learn: ARX/NARX surrogates, PINNs, neural operators
+  verify: solver checks, ablations, regenerated plots
 ```
 
 ## Workbench
 
-| Lane | What I am trying to make less painful |
+| Lane | What I care about |
 | --- | --- |
-| `fractional systems` | Memory-heavy dynamics, chaotic trajectories, and long-horizon prediction. |
-| `neural surrogates` | Fast emulators for systems where repeated numerical solves get expensive. |
-| `optimization` | Fractional-calculus-inspired training rules for deep networks. |
-| `scientific ML` | Structure-aware models: PINNs, neural operators, checks against solvers. |
+| `fractional systems` | Memory kernels, delayed dynamics, chaos, and long-horizon behavior. |
+| `neural surrogates` | Fast emulators when repeated numerical solves become the bottleneck. |
+| `optimization` | Fractional-calculus-inspired updates for training deep networks. |
+| `scientific ML` | Models that respect structure instead of only fitting curves. |
 
 ## Current Threads
 
 - Fractional malware propagation in industrial and cyber-physical systems.
-- Neuronal dynamics: FitzHugh-Nagumo, Hindmarsh-Rose, and related excitable models.
-- Aquatic and plankton systems under toxin, nutrient, climate, and refuge effects.
-- Research-code hygiene: configs, seeds, train/eval commands, and plots that can be regenerated.
+- Neuronal dynamics: FitzHugh-Nagumo, Hindmarsh-Rose, and excitable models.
+- Aquatic systems under toxin, nutrient, climate, and refuge effects.
+- Research-code hygiene: configs, seeds, train/eval commands, plots that rerun.
 
-## Tools
+## Taste
+
+- Baselines before big claims.
+- Metrics with a source.
+- Scripts over screenshots.
+- Short READMEs; full paper lists belong elsewhere.
+
+## Stack
 
 `Python` · `PyTorch` · `NumPy/SciPy` · `MATLAB` · `Jupyter` · `LaTeX` · `Git` · `Linux`
 
-## Notes
+## Canonical Records
 
-No giant publication dump here. The canonical list lives on the [portfolio](https://junaidaliop.github.io/publications/) and [Google Scholar](https://scholar.google.com/citations?user=9VTFIJcAAAAJ), where it is easier to keep current.
+The publication list lives on my [portfolio](https://junaidaliop.github.io/publications/) and [Google Scholar](https://scholar.google.com/citations?user=9VTFIJcAAAAJ). This README is the front door, not the archive.
