@@ -220,7 +220,7 @@ def build_hero(name: str, palette: dict, headline: str, tagline: str) -> None:
 def main() -> None:
     ensure_dirs()
     headline = "fractional deep learning"
-    tagline  = "spiking nets · fractional optimisation · memory kernels · surrogates"
+    tagline  = "spiking nets · fractional optimization · memory kernels · surrogates"
     build_hero("hero-dark.png",  DARK,  headline, tagline)
     build_hero("hero-light.png", LIGHT, headline, tagline)
     print(f"Built assets in {ASSETS_DIR}")
