@@ -8,10 +8,6 @@
 <h1 align="center">Muhammad Junaid Ali Asif Raja</h1>
 
 <p align="center">
-  <sub>Machine Learning Research &nbsp;·&nbsp; Direct-entry PhD &nbsp;·&nbsp; Fractional Intelligent Computing Lab &nbsp;·&nbsp; National Yunlin University of Science &amp; Technology &nbsp;·&nbsp; Douliu, Taiwan</sub>
-</p>
-
-<p align="center">
   <a href="https://junaidaliop.github.io"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-junaidaliop.github.io-7C3AED?style=flat-square&logo=githubpages&logoColor=white"></a>
   <a href="https://scholar.google.com/citations?user=9VTFIJcAAAAJ"><img alt="Google Scholar" src="https://img.shields.io/badge/Scholar-profile-22D3EE?style=flat-square&logo=googlescholar&logoColor=white"></a>
   <a href="https://orcid.org/0009-0008-9249-9983"><img alt="ORCID" src="https://img.shields.io/badge/ORCID-0009--0008--9249--9983-A78BFA?style=flat-square&logo=orcid&logoColor=white"></a>
@@ -19,13 +15,55 @@
   <a href="mailto:muhammadjunaidaliasifraja@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-contact-7C3AED?style=flat-square&logo=protonmail&logoColor=white"></a>
 </p>
 
+```toml
+[profile]
+name        = "Muhammad Junaid Ali Asif Raja"
+role        = "Machine Learning Research"
+position    = "Direct-entry PhD"
+lab         = "Fractional Intelligent Computing Lab"
+affiliation = "National Yunlin University of Science & Technology"
+location    = "Douliu, Taiwan"
+
+[contact]
+portfolio   = "https://junaidaliop.github.io"
+scholar     = "https://scholar.google.com/citations?user=9VTFIJcAAAAJ"
+orcid       = "0009-0008-9249-9983"
+cv          = "https://junaidaliop.github.io/assets/pdf/cv.pdf"
+email       = "muhammadjunaidaliasifraja@gmail.com"
+
+[status]
+open-to     = ["collaborations", "internships", "fractional-DL discussions"]
+last-update = "2026-05"
+```
+
 ---
 
 ## Fractional Deep Learning
 
-I am working on **Fractional Deep Learning** — a thread within Scientific Machine Learning (SciML) that brings the tools of fractional calculus into deep learning. The hook is operators that encode long-range memory parametrically — Caputo, Grünwald–Letnikov, Riemann–Liouville — and the question is whether networks can *learn under* those operators rather than approximate them from outside.
+I am working on **Fractional Deep Learning**, a thread within Scientific Machine Learning (SciML) that brings the tools of fractional calculus into deep learning. The hook is operators that encode long-range memory parametrically: Caputo[^caputo], Grünwald–Letnikov[^gl], Riemann–Liouville[^rl]. The question is whether networks can *learn under* those operators rather than approximate them from outside.
 
-The toolkit spans **physics-informed neural networks (PINNs)**, **neural operators**, **intelligent surrogates** for fractional-order systems, **fractional-aware optimizers**, and **fractional spiking neural networks (FSNNs)** — the leaky integrate-and-fire (LIF) cell lifted into Caputo-sense dynamics. The domains are wherever memory is the structure: computational neuroscience (Hindmarsh–Rose, FitzHugh–Nagumo, memristive neurons), cyber-physical systems (delay-differential malware propagation, SCADA security), aquatic ecology (toxin–plankton–nutrient dynamics), and climate-coupled forcing.
+The toolkit spans **physics-informed neural networks (PINNs)**, **neural operators**, **intelligent surrogates** for fractional-order systems, **fractional-inspired optimization**, and **fractional spiking neural networks (FSNNs)**, including the leaky integrate-and-fire (LIF) cell lifted into Caputo-sense dynamics. The domains follow the same constraint. Wherever memory is the structure rather than the noise.
+
+<table>
+<tr><th align="left">Methods</th><th align="left">Domains</th></tr>
+<tr><td valign="top">
+
+- physics-informed neural networks (PINNs)
+- neural operators
+- intelligent surrogates
+- fractional-inspired optimization
+- fractional spiking neural networks (FSNNs)
+
+</td><td valign="top">
+
+- fractional-order differential systems
+- computational neuroscience (Hindmarsh–Rose, FitzHugh–Nagumo, memristive neurons)
+- cyber-physical systems (delay-differential malware, SCADA security)
+- aquatic ecology (toxin / plankton / nutrient dynamics)
+- climate-coupled forcing
+
+</td></tr>
+</table>
 
 The shape of the field is still settling. That is the point.
 
@@ -39,7 +77,7 @@ class FractionalDeepLearning:
         "physics-informed neural networks  (PINNs)",
         "neural operators",
         "intelligent surrogates",
-        "fractional-order optimization",
+        "fractional-inspired optimization",
         "fractional spiking neural networks  (FSNNs)",
     )
     domains:  tuple[str, ...] = (
@@ -54,6 +92,8 @@ class FractionalDeepLearning:
     horizon:  int   = 1024          # rollout horizon for long-memory dynamics
     open:     bool  = True          # research direction still taking shape
 ```
+
+**Working principles.** Baselines before claims. Configs and seeds committed with the figure. Plots regenerate from a single script, or they are not in the paper.
 
 ---
 
@@ -70,9 +110,40 @@ class FractionalDeepLearning:
 
 Full record on the [publications page](https://junaidaliop.github.io/publications/).
 
+```bibtex
+@article{raja2025hybrid,
+  title   = {A hybrid neural-computational paradigm for complex firing
+             patterns and excitability transitions in fractional
+             Hindmarsh--Rose neuronal models},
+  author  = {Raja, Muhammad Junaid Ali Asif and others},
+  journal = {Chaos, Solitons \& Fractals},
+  year    = {2025},
+  doi     = {10.1016/j.chaos.2025.116149}
+}
+```
+
+---
+
+## Education
+
+1. **Direct-entry PhD**, Computer Science & Information Engineering. *National Yunlin University of Science & Technology*, Taiwan. 2024 – present.
+2. **BE, Electrical Engineering** (Embedded Systems & Artificial Intelligence). *School of Electrical Engineering & Computer Science (SEECS), National University of Sciences & Technology (NUST)*, Pakistan. 2019 – 2023.
+
+## Honors
+
+**Phi Tau Phi Scholastic Honor Society**, Republic of China chapter, 2025. Top 2% of graduate master's students.
+
+## Mentoring
+
+Graduate students mentored on fractional-deep-learning and neural-surrogate projects, with first-author publications in *Chaos, Solitons & Fractals*, *Water Research*, *International Journal of Computer Mathematics*, and *Nonlinear Dynamics*.
+
 ---
 
 <p align="center">
-  <img alt="Animated time series — fractional Hindmarsh–Rose ground truth vs neural surrogate prediction" src="assets/profile/signature.svg" width="100%">
+  <img alt="Fractional Hindmarsh–Rose — time series and (x, y) attractor projection, ground truth vs neural surrogate" src="assets/profile/signature.svg" width="100%">
 </p>
-<p align="center"><sub><i>signature.svg — fractional Hindmarsh–Rose bursting, ground truth vs neural surrogate, rendered live.</i></sub></p>
+<p align="center"><sub><i>signature.svg — fractional Hindmarsh–Rose bursting alongside its (x, y) attractor projection. Ground truth in violet, neural surrogate in cyan, rendered live.</i></sub></p>
+
+[^caputo]: **Caputo derivative.** Convolutional kernel with classical initial conditions; the default in physics-informed fractional models.
+[^gl]: **Grünwald–Letnikov.** Limit-of-finite-differences formulation; natural for discrete-time schemes and FSNN dynamics.
+[^rl]: **Riemann–Liouville.** Analytic baseline; integer-order initial data is non-trivial, which is why Caputo dominates engineering work.
