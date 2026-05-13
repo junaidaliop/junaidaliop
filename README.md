@@ -40,18 +40,19 @@ last-update = "2026-05"
 
 ## Fractional Deep Learning
 
-I am working on **Fractional Deep Learning**, a thread within Scientific Machine Learning (SciML) that brings the tools of fractional calculus into deep learning. The premise is that long-range memory in real systems is captured parametrically by fractional operators (Caputo[^caputo], Grünwald–Letnikov[^gl], Riemann–Liouville[^rl]). The open question is whether networks can *learn under* those operators rather than approximating them from outside.
+I am working on **Fractional Deep Learning**: a thread within Scientific Machine Learning (SciML) where fractional calculus and deep learning each lend the other something the other lacks. The traffic runs both ways. We apply AI/ML to fractional calculus, building intelligent surrogates that replace expensive numerical solves of fractional-order systems. We apply fractional calculus to AI/ML, using memory-aware operators to reshape optimization, architectures, and learned dynamics. That bidirectional exchange is the crux of the field.
 
-The toolkit spans **physics-informed neural networks (PINNs)**, **neural operators**, **intelligent surrogates** for fractional-order systems, **fractional-inspired optimization**, and **fractional spiking neural networks (FSNNs)**. The leaky integrate-and-fire (LIF) cell is taken into Caputo dynamics; the domains follow the same constraint, wherever memory is the structure rather than the noise.
+The toolkit includes **fractional neural operators**, **fractional physics-inspired neural networks**, **intelligent surrogates** for fractional-order systems, **fractional deep-learning optimization algorithms**, **fractional heuristic algorithms**, and **fractional spiking neural networks (FSNNs)**, where the leaky integrate-and-fire (LIF) cell is lifted into Caputo dynamics. The hook is operators that encode long-range memory parametrically: Caputo, Grünwald–Letnikov, Riemann–Liouville. The domains follow the same constraint, wherever memory is the structure rather than the noise.
 
 <table>
 <tr><th align="left">Methods</th><th align="left">Domains</th></tr>
 <tr><td valign="top">
 
-- physics-informed neural networks (PINNs)
-- neural operators
+- fractional neural operators
+- fractional physics-inspired neural networks
 - intelligent surrogates
-- fractional-inspired optimization
+- fractional deep-learning optimization algorithms
+- fractional heuristic algorithms
 - fractional spiking neural networks (FSNNs)
 
 </td><td valign="top">
@@ -72,12 +73,13 @@ from dataclasses import dataclass, field
 
 @dataclass(frozen=True)
 class FractionalDeepLearning:
-    """A SciML thread bringing fractional calculus into deep learning."""
+    """A SciML thread. AI/ML applied to fractional calculus, and back."""
     methods:  tuple[str, ...] = (
-        "physics-informed neural networks  (PINNs)",
-        "neural operators",
+        "fractional neural operators",
+        "fractional physics-inspired neural networks",
         "intelligent surrogates",
-        "fractional-inspired optimization",
+        "fractional deep-learning optimization algorithms",
+        "fractional heuristic algorithms",
         "fractional spiking neural networks  (FSNNs)",
     )
     domains:  tuple[str, ...] = (
@@ -165,7 +167,3 @@ shell       = ["Git", "Linux"]
 </p>
 
 <p align="center"><sub>Open to collaborations. Reach me at <a href="mailto:muhammadjunaidaliasifraja@gmail.com">muhammadjunaidaliasifraja@gmail.com</a>.</sub></p>
-
-[^caputo]: **Caputo derivative.** Convolutional kernel with classical initial conditions; the default in physics-informed fractional models.
-[^gl]: **Grünwald–Letnikov.** Limit-of-finite-differences formulation; natural for discrete-time schemes and FSNN dynamics.
-[^rl]: **Riemann–Liouville.** Analytic baseline; integer-order initial data is non-trivial, which is why Caputo dominates engineering work.
