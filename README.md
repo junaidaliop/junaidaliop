@@ -40,9 +40,9 @@ last-update = "2026-05"
 
 ## Fractional Deep Learning
 
-I am working on **Fractional Deep Learning**, a thread within Scientific Machine Learning (SciML) that brings the tools of fractional calculus into deep learning. The hook is operators that encode long-range memory parametrically: Caputo[^caputo], Grünwald–Letnikov[^gl], Riemann–Liouville[^rl]. The question is whether networks can *learn under* those operators rather than approximate them from outside.
+I am working on **Fractional Deep Learning**, a thread within Scientific Machine Learning (SciML) that brings the tools of fractional calculus into deep learning. The premise is that long-range memory in real systems is captured parametrically by fractional operators (Caputo[^caputo], Grünwald–Letnikov[^gl], Riemann–Liouville[^rl]). The open question is whether networks can *learn under* those operators rather than approximating them from outside.
 
-The toolkit spans **physics-informed neural networks (PINNs)**, **neural operators**, **intelligent surrogates** for fractional-order systems, **fractional-inspired optimization**, and **fractional spiking neural networks (FSNNs)**, including the leaky integrate-and-fire (LIF) cell lifted into Caputo-sense dynamics. The domains follow the same constraint. Wherever memory is the structure rather than the noise.
+The toolkit spans **physics-informed neural networks (PINNs)**, **neural operators**, **intelligent surrogates** for fractional-order systems, **fractional-inspired optimization**, and **fractional spiking neural networks (FSNNs)**. The leaky integrate-and-fire (LIF) cell is taken into Caputo dynamics; the domains follow the same constraint, wherever memory is the structure rather than the noise.
 
 <table>
 <tr><th align="left">Methods</th><th align="left">Domains</th></tr>
@@ -65,7 +65,7 @@ The toolkit spans **physics-informed neural networks (PINNs)**, **neural operato
 </td></tr>
 </table>
 
-The shape of the field is still settling. That is the point.
+The field is young. That is the point.
 
 ```python
 from dataclasses import dataclass, field
@@ -93,7 +93,12 @@ class FractionalDeepLearning:
     open:     bool  = True          # research direction still taking shape
 ```
 
-**Working principles.** Baselines before claims. Configs and seeds committed with the figure. Plots regenerate from a single script, or they are not in the paper.
+---
+
+## Open questions
+
+1. **Fractional-order spiking neural networks for neuromorphic systems.** Neuromorphic substrates are memory-cheap by design. Can fractional-inspired spiking add useful memory to a memory-cheap setup without giving back the efficiency that made it interesting in the first place? Open.
+2. **Fractional-order optimization at scale.** Memory-aware gradient updates introduce per-parameter state, drawn from the full history of the optimisation trajectory. Is the bookkeeping ever feasible at large-language-model scale? Open.
 
 ---
 
@@ -135,14 +140,31 @@ Full record on the [publications page](https://junaidaliop.github.io/publication
 
 ## Mentoring
 
-Graduate students mentored on fractional-deep-learning and neural-surrogate projects, with first-author publications in *Chaos, Solitons & Fractals*, *Water Research*, *International Journal of Computer Mathematics*, and *Nonlinear Dynamics*.
+Mentoring research students in **fractional deep learning** and on **intelligent neural surrogates for nonlinear dynamical system reconstruction**.
+
+## Stack
+
+```toml
+[stack]
+languages   = ["Python", "Julia", "MATLAB"]
+ml          = ["PyTorch", "JAX"]
+numerical   = ["NumPy", "SciPy", "DifferentialEquations.jl"]
+typeset     = "LaTeX"
+notebook    = "Jupyter"
+shell       = ["Git", "Linux"]
+```
 
 ---
 
 <p align="center">
   <img alt="Fractional Hindmarsh–Rose — time series and (x, y) attractor projection, ground truth vs neural surrogate" src="assets/profile/signature.svg" width="100%">
 </p>
-<p align="center"><sub><i>signature.svg — fractional Hindmarsh–Rose bursting alongside its (x, y) attractor projection. Ground truth in violet, neural surrogate in cyan, rendered live.</i></sub></p>
+
+<p align="center">
+  <img alt="Lorenz system — time series and (x, z) butterfly attractor, ground truth vs neural surrogate" src="assets/profile/lorenz.svg" width="100%">
+</p>
+
+<p align="center"><sub>Open to collaborations. Reach me at <a href="mailto:muhammadjunaidaliasifraja@gmail.com">muhammadjunaidaliasifraja@gmail.com</a>.</sub></p>
 
 [^caputo]: **Caputo derivative.** Convolutional kernel with classical initial conditions; the default in physics-informed fractional models.
 [^gl]: **Grünwald–Letnikov.** Limit-of-finite-differences formulation; natural for discrete-time schemes and FSNN dynamics.
