@@ -40,33 +40,9 @@ last-update = "2026-05"
 
 ## Fractional Deep Learning
 
-I am working on **Fractional Deep Learning**: a thread within Scientific Machine Learning (SciML) where fractional calculus and deep learning each lend the other something the other lacks. The traffic runs both ways. We apply AI/ML to fractional calculus, building intelligent surrogates that replace expensive numerical solves of fractional-order systems. We apply fractional calculus to AI/ML, using memory-aware operators to reshape optimization, architectures, and learned dynamics. That bidirectional exchange is the crux of the field.
+I am working on **Fractional Deep Learning**: a thread within Scientific Machine Learning (SciML) where fractional calculus and deep learning each lend the other something the other lacks. We apply AI/ML to fractional calculus, building intelligent surrogates that replace expensive numerical solves of fractional-order systems. We apply fractional calculus to AI/ML, using memory-aware operators to reshape optimization, architectures, and learned dynamics. That bidirectional exchange is the crux of the field.
 
-The toolkit includes **fractional neural operators**, **fractional physics-inspired neural networks**, **intelligent surrogates** for fractional-order systems, **fractional deep-learning optimization algorithms**, **fractional heuristic algorithms**, and **fractional spiking neural networks (FSNNs)**, where the leaky integrate-and-fire (LIF) cell is lifted into Caputo dynamics. The hook is operators that encode long-range memory parametrically: Caputo, Grünwald–Letnikov, Riemann–Liouville. The domains follow the same constraint, wherever memory is the structure rather than the noise.
-
-<table>
-<tr><th align="left">Methods</th><th align="left">Domains</th></tr>
-<tr><td valign="top">
-
-- fractional neural operators
-- fractional physics-inspired neural networks
-- intelligent surrogates
-- fractional deep-learning optimization algorithms
-- fractional heuristic algorithms
-- fractional spiking neural networks (FSNNs)
-
-</td><td valign="top">
-
-- fractional-order differential systems
-- computational neuroscience (Hindmarsh–Rose, FitzHugh–Nagumo, memristive neurons)
-- cyber-physical systems (delay-differential malware, SCADA security)
-- aquatic ecology (toxin / plankton / nutrient dynamics)
-- climate-coupled forcing
-
-</td></tr>
-</table>
-
-The field is young. That is the point.
+The toolkit includes **fractional neural operators**, **fractional physics-inspired neural networks**, **intelligent surrogates** for fractional-order systems, **fractional deep-learning optimization algorithms**, **fractional heuristic algorithms**, and **fractional spiking neural networks**, where the leaky integrate-and-fire cell is lifted into Caputo dynamics. These operators encode long-range memory parametrically: Caputo, Grünwald–Letnikov, Riemann–Liouville. The domains follow the same constraint, wherever memory is the structure rather than the noise.
 
 ```python
 from dataclasses import dataclass, field
@@ -80,14 +56,19 @@ class FractionalDeepLearning:
         "intelligent surrogates",
         "fractional deep-learning optimization algorithms",
         "fractional heuristic algorithms",
-        "fractional spiking neural networks  (FSNNs)",
+        "fractional spiking neural networks",
     )
     domains:  tuple[str, ...] = (
         "fractional-order differential systems",
         "computational neuroscience",
+        "medical image analysis",
+        "plankton dynamics and aquatic ecology",
+        "epidemiology and public health",
         "cyber-physical systems",
-        "aquatic ecology",
-        "climate-coupled dynamics",
+        "chaotic and dynamical systems",
+        "convolutional neural networks",
+        "transformers and large language models",
+        "recommender systems",
     )
     alpha:    float = 0.95          # fractional order, Caputo sense
     kernel:   str   = "caputo"      # caputo | grunwald-letnikov | riemann-liouville
@@ -99,8 +80,13 @@ class FractionalDeepLearning:
 
 ## Open questions
 
-1. **Fractional-order spiking neural networks for neuromorphic systems.** Neuromorphic substrates are memory-cheap by design. Can fractional-inspired spiking add useful memory to a memory-cheap setup without giving back the efficiency that made it interesting in the first place? Open.
-2. **Fractional-order optimization at scale.** Memory-aware gradient updates introduce per-parameter state, drawn from the full history of the optimisation trajectory. Is the bookkeeping ever feasible at large-language-model scale? Open.
+> [!IMPORTANT]
+> **Q1 · Fractional spiking neural networks for neuromorphic substrates.**
+> Neuromorphic substrates are memory-cheap by design. Can fractional spiking neural networks add useful memory to a memory-cheap setup without giving back the efficiency that made it interesting in the first place?
+
+> [!IMPORTANT]
+> **Q2 · Fractional optimization at the scale of large language models.**
+> Fractional deep-learning optimization algorithms introduce per-parameter memory state, drawn from the full history of the optimization trajectory. Is the bookkeeping feasible at the scale of large language models?
 
 ---
 
@@ -146,15 +132,23 @@ Mentoring research students in **fractional deep learning** and on **intelligent
 
 ## Stack
 
-```toml
-[stack]
-languages   = ["Python", "Julia", "MATLAB"]
-ml          = ["PyTorch", "JAX"]
-numerical   = ["NumPy", "SciPy", "DifferentialEquations.jl"]
-typeset     = "LaTeX"
-notebook    = "Jupyter"
-shell       = ["Git", "Linux"]
-```
+<p>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="Julia" src="https://img.shields.io/badge/Julia-9558B2?style=flat-square&logo=julia&logoColor=white">
+  <img alt="MATLAB" src="https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white">
+  <img alt="LaTeX" src="https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white">
+  <img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white">
+  <br>
+  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white">
+  <img alt="JAX" src="https://img.shields.io/badge/JAX-5B21B6?style=flat-square&logoColor=white">
+  <img alt="scikit-learn" src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white">
+  <img alt="Hugging Face" src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black">
+  <br>
+  <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white">
+  <img alt="VS Code" src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white">
+  <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white">
+  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black">
+</p>
 
 ---
 
