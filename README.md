@@ -19,95 +19,60 @@
   <a href="mailto:muhammadjunaidaliasifraja@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-contact-7C3AED?style=flat-square&logo=protonmail&logoColor=white"></a>
 </p>
 
-## Fractional Deep Learning
-
-Real systems carry memory. A neuron's past spikes shape its present voltage. A plankton bloom remembers the season before. Malware on an air-gapped network remembers every infection event. Classical models throw that history away, or pay $\mathcal{O}(N^{2})$ at every step to keep it. That trade is what I want to fix.
-
-**Fractional-order operators** — Caputo, Grünwald–Letnikov, Riemann–Liouville — encode long-range dependence parametrically. One number, $\alpha$, controls everything from a sharp spike to a power-law tail. The right question is no longer *how to approximate the operator from outside*, but *whether a network can learn under it from inside*.
-
-Four research areas, all variations on the same question. **Fractional-order differential systems** — the math everything else stands on. **Computational neuroscience** — fractional Hindmarsh–Rose, FitzHugh–Nagumo, memristive neurons, and **fractional spiking neural networks (FSNNs)** — the leaky integrate-and-fire (LIF) cell lifted into Caputo-sense dynamics. **Intelligent surrogates** — NARX, Bayesian-regularized cascades, physics-informed neural networks (PINNs) that have to be right pointwise *and* right under the operator. **Deep-learning optimization algorithms** — because gradients themselves have memory, if you let them.
-
-The class of systems under study and the criterion the surrogate $x_\theta$ minimizes:
-
-$$ {}^{C}_{\,0}\mathcal{D}^{\alpha}_{t}\,x(t) \;=\; f\!\big(x(t),\,x(t-\tau),\,t\big), \qquad 0 < \alpha \leq 1 $$
-
-$$
-\begin{aligned}
-\mathcal{L}(\theta) \;=\;& \sum_{t}\big\Vert\, x_\theta(t) - x(t)\,\big\Vert_{2}^{2} \\
-                       +\;& \lambda\,\big\Vert\, {}^{C}_{\,0}\mathcal{D}^{\alpha}_{t}\,x_\theta(t) \,-\, f\!\big(x_\theta(t),\,x_\theta(t-\tau),\,t\big)\,\big\Vert_{2}^{2}
-\end{aligned}
-$$
-
-Correct pointwise, *and* correct under the fractional operator.
-
-<p align="center">
-  <img alt="Memory-kernel field — fractional decay envelopes for different orders of α" src="assets/profile/kernel-field.jpg" width="100%">
-</p>
-<p align="center"><sub><i>kernel-field — fractional decay envelopes, parametrized by α.</i></sub></p>
-
-```python
-import numpy as np
-from scipy.special import gamma
-
-def caputo_l1(x: np.ndarray, alpha: float, dt: float) -> np.ndarray:
-    """L1 scheme for the Caputo derivative ⁿᵒᵗᵉ⁾ the baseline x_θ has to amortize."""
-    n = len(x)
-    b = np.array([(k + 1)**(1 - alpha) - k**(1 - alpha) for k in range(n)])
-    out = np.zeros(n)
-    coef = dt**(-alpha) / gamma(2 - alpha)
-    for i in range(1, n):
-        out[i] = coef * sum(b[k] * (x[i - k] - x[i - k - 1]) for k in range(i))
-    return out
-```
-
 ---
 
-## Currently · 2026-Q2
+## Fractional Deep Learning
 
-| Track | Open question |
-|:--|:--|
-| **Cyber-physical systems** (CPS) | What mechanisms shape the heavy-tailed infection-time distribution of fractional malware propagation on air-gapped industrial networks — including SCADA (Supervisory Control and Data Acquisition) settings? |
-| **Computational neuroscience** | Are bursting transitions in fractional Hindmarsh–Rose and memristive neurons recoverable from short observation windows? |
-| **Aquatic ecology** | Can a neural surrogate match a stiff implicit solver on toxin–plankton–nutrient dynamics under non-stationary climate forcing? |
-| **Fractional optimization** | When do memory-aware gradient updates outperform Adam, and on which loss landscapes? |
-| **Fractional spiking nets** | What does a leaky integrate-and-fire (LIF) neuron look like under a Caputo memory kernel — and what does it gain over a smooth-rate counterpart? |
+I am working on **Fractional Deep Learning** — a thread within Scientific Machine Learning (SciML) that brings the tools of fractional calculus into deep learning. The hook is operators that encode long-range memory parametrically — Caputo, Grünwald–Letnikov, Riemann–Liouville — and the question is whether networks can *learn under* those operators rather than approximate them from outside.
+
+The toolkit spans **physics-informed neural networks (PINNs)**, **neural operators**, **intelligent surrogates** for fractional-order systems, **fractional-aware optimizers**, and **fractional spiking neural networks (FSNNs)** — the leaky integrate-and-fire (LIF) cell lifted into Caputo-sense dynamics. The domains are wherever memory is the structure: computational neuroscience (Hindmarsh–Rose, FitzHugh–Nagumo, memristive neurons), cyber-physical systems (delay-differential malware propagation, SCADA security), aquatic ecology (toxin–plankton–nutrient dynamics), and climate-coupled forcing.
+
+The shape of the field is still settling. That is the point.
+
+```python
+from dataclasses import dataclass, field
+
+@dataclass(frozen=True)
+class FractionalDeepLearning:
+    """A SciML thread bringing fractional calculus into deep learning."""
+    methods:  tuple[str, ...] = (
+        "physics-informed neural networks  (PINNs)",
+        "neural operators",
+        "intelligent surrogates",
+        "fractional-order optimization",
+        "fractional spiking neural networks  (FSNNs)",
+    )
+    domains:  tuple[str, ...] = (
+        "fractional-order differential systems",
+        "computational neuroscience",
+        "cyber-physical systems",
+        "aquatic ecology",
+        "climate-coupled dynamics",
+    )
+    alpha:    float = 0.95          # fractional order, Caputo sense
+    kernel:   str   = "caputo"      # caputo | grunwald-letnikov | riemann-liouville
+    horizon:  int   = 1024          # rollout horizon for long-memory dynamics
+    open:     bool  = True          # research direction still taking shape
+```
 
 ---
 
 ## Selected work
 
-Eight papers, four tracks. Full record on the [publications page](https://junaidaliop.github.io/publications/).
+1. **A Hybrid Neural-Computational Paradigm for Complex Firing Patterns and Excitability Transitions in Fractional Hindmarsh–Rose Neuronal Models.** *Chaos, Solitons & Fractals*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.chaos.2025.116149-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.chaos.2025.116149)
+2. **Design of Intelligent Bayesian-Regularized Deep Cascaded NARX Neurostructure for Predictive Analysis of FitzHugh–Nagumo Bioelectrical Model in Neuronal Cell Membrane.** *Biomedical Signal Processing and Control*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.bspc.2024.107192-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.bspc.2024.107192)
+3. **A Hybrid Intelligent Computational Framework for Diverse Firing Patterns in a Fractional-Order Locally Active Memristive Neuron Model.** *Chaos, Solitons & Fractals*, 2026. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.chaos.2026.118209-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.chaos.2026.118209)
+4. **Neuro-Computational Surrogates for Aqueous Fractional-Order Nekton–Plankton Spatiotemporal Dynamics Under Toxicant Stress, Refuge Efficacy, and Nutrient Flux Modulation.** *Water Research*, 2026. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.watres.2025.124754-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.watres.2025.124754)
+5. **Design of a Fractional-Order Environmental Toxin–Plankton System in Aquatic Ecosystems: A Novel Machine Predictive Expedition with Nonlinear Autoregressive Neuroarchitectures.** *Water Research*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.watres.2025.123640-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.watres.2025.123640)
+6. **Design of Deep Learning Networks for Nonlinear Delay Differential System for Stuxnet Virus Spread in an Air-Gapped Critical Environment.** *Applied Soft Computing*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.asoc.2025.113091-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.asoc.2025.113091)
+7. **Machine Learning Knowledge Driven Investigation for Immunity Infused Fractional Industrial Virus Transmission in SCADA Systems.** *Journal of Industrial Information Integration*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.jii.2025.100940-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.jii.2025.100940)
+8. **Bayesian-Regularized Cascaded Neural Networks for Fractional Asymmetric Carbon–Thermal Nutrient–Plankton Dynamics Under Global Warming and Climatic Perturbations.** *Engineering Applications of Artificial Intelligence*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.engappai.2025.110739-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.engappai.2025.110739)
 
-1. *[computational neuroscience]* &nbsp; **A Hybrid Neural-Computational Paradigm for Complex Firing Patterns and Excitability Transitions in Fractional Hindmarsh–Rose Neuronal Models.** *Chaos, Solitons & Fractals*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.chaos.2025.116149-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.chaos.2025.116149)
-2. *[computational neuroscience]* &nbsp; **Design of Intelligent Bayesian-Regularized Deep Cascaded NARX Neurostructure for Predictive Analysis of FitzHugh–Nagumo Bioelectrical Model in Neuronal Cell Membrane.** *Biomedical Signal Processing and Control*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.bspc.2024.107192-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.bspc.2024.107192)
-3. *[computational neuroscience]* &nbsp; **A Hybrid Intelligent Computational Framework for Diverse Firing Patterns in a Fractional-Order Locally Active Memristive Neuron Model.** *Chaos, Solitons & Fractals*, 2026. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.chaos.2026.118209-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.chaos.2026.118209)
-4. *[aquatic ecology]* &nbsp; **Neuro-Computational Surrogates for Aqueous Fractional-Order Nekton–Plankton Spatiotemporal Dynamics Under Toxicant Stress, Refuge Efficacy, and Nutrient Flux Modulation.** *Water Research*, 2026. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.watres.2025.124754-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.watres.2025.124754)
-5. *[aquatic ecology]* &nbsp; **Design of a Fractional-Order Environmental Toxin–Plankton System in Aquatic Ecosystems: A Novel Machine Predictive Expedition with Nonlinear Autoregressive Neuroarchitectures.** *Water Research*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.watres.2025.123640-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.watres.2025.123640)
-6. *[cyber-physical systems]* &nbsp; **Design of Deep Learning Networks for Nonlinear Delay Differential System for Stuxnet Virus Spread in an Air-Gapped Critical Environment.** *Applied Soft Computing*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.asoc.2025.113091-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.asoc.2025.113091)
-7. *[cyber-physical systems]* &nbsp; **Machine Learning Knowledge Driven Investigation for Immunity Infused Fractional Industrial Virus Transmission in SCADA Systems.** *Journal of Industrial Information Integration*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.jii.2025.100940-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.jii.2025.100940)
-8. *[climate-coupled dynamics]* &nbsp; **Bayesian-Regularized Cascaded Neural Networks for Fractional Asymmetric Carbon–Thermal Nutrient–Plankton Dynamics Under Global Warming and Climatic Perturbations.** *Engineering Applications of Artificial Intelligence*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.engappai.2025.110739-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.engappai.2025.110739)
-
----
-
-<p align="center">
-  <img alt="Research constellation — four areas of fractional deep learning sketched as a dark star chart" src="assets/profile/constellation.jpg" width="100%">
-</p>
-<p align="center"><sub><i>constellation — the four threads sketched as a dark star chart.</i></sub></p>
-
----
-
-## Repositories
-
-- **[optim](https://github.com/junaidaliop/optim)** — fractional-calculus-inspired optimizers for deep networks; the code behind the *fractional optimization* thread above.
-- **[MobileNetV4](https://github.com/junaidaliop/MobileNetV4)** — a clean PyTorch port of the MobileNetV4 architecture; used as a baseline backbone for surrogate-architecture experiments.
-- **[MNIST-SOPCNN](https://github.com/junaidaliop/MNIST-SOPCNN)** — self-organizing polynomial CNN reference implementation.
-- **[daily-research-paper-recommender](https://github.com/junaidaliop/daily-research-paper-recommender)** — a personal arXiv recommender for fractional-calculus and SciML preprints.
+Full record on the [publications page](https://junaidaliop.github.io/publications/).
 
 ---
 
 <p align="center">
-  <img alt="Animated spike-train signature — fractional Hindmarsh–Rose, α = 0.95, bursting regime" src="assets/profile/signature.svg" width="100%">
+  <img alt="Animated time series — fractional Hindmarsh–Rose ground truth vs neural surrogate prediction" src="assets/profile/signature.svg" width="100%">
 </p>
-<p align="center"><sub><i>signature.svg — animated time series of a fractional bursting neuron, rendered live in your browser.</i></sub></p>
-
-<p align="center"><sub>Open to collaborations &nbsp;·&nbsp; <a href="mailto:muhammadjunaidaliasifraja@gmail.com">muhammadjunaidaliasifraja@gmail.com</a></sub></p>
+<p align="center"><sub><i>signature.svg — fractional Hindmarsh–Rose bursting, ground truth vs neural surrogate, rendered live.</i></sub></p>
