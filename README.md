@@ -90,6 +90,22 @@ class FractionalDeepLearning:
 
 ---
 
+## Open source
+
+**[zij](https://github.com/junaidaliop/zij)** — a Canon of deep learning optimizers. One comprehensive reference that brings the field's optimization algorithms together in a single place, paired with a PyTorch library to run them, named after the *zij* astronomical handbooks of al-Khwārizmī. It carries dedicated coverage of fractional-order optimization, the corner of the field closest to my own work.
+
+<p>
+  <a href="https://pypi.org/project/zij/"><img alt="PyPI" src="https://img.shields.io/pypi/v/zij?style=flat-square&logo=pypi&logoColor=white&color=7C3AED&labelColor=2D1F4A"></a>
+  <a href="https://github.com/junaidaliop/zij"><img alt="Stars" src="https://img.shields.io/github/stars/junaidaliop/zij?style=flat-square&logo=github&logoColor=white&color=22D3EE&labelColor=2D1F4A"></a>
+  <a href="https://github.com/junaidaliop/zij/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache--2.0-A78BFA?style=flat-square&labelColor=2D1F4A"></a>
+</p>
+
+```bash
+pip install zij
+```
+
+---
+
 ## Selected work
 
 1. **A Hybrid Neural-Computational Paradigm for Complex Firing Patterns and Excitability Transitions in Fractional Hindmarsh–Rose Neuronal Models.** *Chaos, Solitons & Fractals*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.chaos.2025.116149-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.chaos.2025.116149)
