@@ -19,7 +19,7 @@
 [profile]
 name        = "Muhammad Junaid Ali Asif Raja"
 role        = "Machine Learning Research"
-position    = "Direct-entry PhD"
+position    = "Direct PhD"
 lab         = "Fractional Intelligent Computing Lab"
 affiliation = "National Yunlin University of Science & Technology"
 location    = "Douliu, Taiwan"
@@ -33,7 +33,7 @@ email       = "muhammadjunaidaliasifraja@gmail.com"
 
 [status]
 open-to     = ["collaborations", "internships", "fractional-DL discussions"]
-last-update = "2026-05"
+last-update = "2026-07"
 ```
 
 ---
