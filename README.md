@@ -3,7 +3,7 @@
   <img alt="Muhammad Junaid Ali Asif Raja — Fractional Deep Learning" src="assets/profile/hero-light.png" width="100%">
 </picture>
 
-<p align="center"><i>Networks should learn under fractional operators, not despite them.</i></p>
+<p align="center"><i>Fractional Calculus meets Deep Learning.</i></p>
 
 <h1 align="center">Muhammad Junaid Ali Asif Raja</h1>
 
@@ -118,18 +118,6 @@ pip install zij
 8. **Bayesian-Regularized Cascaded Neural Networks for Fractional Asymmetric Carbon–Thermal Nutrient–Plankton Dynamics Under Global Warming and Climatic Perturbations.** *Engineering Applications of Artificial Intelligence*, 2025. &nbsp; [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.engappai.2025.110739-A78BFA?style=flat-square&labelColor=2D1F4A)](https://doi.org/10.1016/j.engappai.2025.110739)
 
 Full record on the [publications page](https://junaidaliop.github.io/publications/).
-
-```bibtex
-@article{raja2025hybrid,
-  title   = {A hybrid neural-computational paradigm for complex firing
-             patterns and excitability transitions in fractional
-             Hindmarsh--Rose neuronal models},
-  author  = {Raja, Muhammad Junaid Ali Asif and others},
-  journal = {Chaos, Solitons \& Fractals},
-  year    = {2025},
-  doi     = {10.1016/j.chaos.2025.116149}
-}
-```
 
 ---
 
